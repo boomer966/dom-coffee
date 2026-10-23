@@ -308,6 +308,14 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 /* Hero: photo of the entrance with red awning, darkened so the headline stays readable */
 .hero__photo{background-image:url("images/hero-entrance.webp");background-position:50% 40%;filter:brightness(.5) saturate(.9) contrast(1.06)}
 @media(max-width:850px){.hero__photo{top:-14%;background-position:50% 50%;filter:brightness(.62) saturate(.9) contrast(1.06)}.hero__shade{background:linear-gradient(180deg,rgba(13,8,9,.42) 0%,rgba(13,8,9,.58) 45%,rgba(13,8,9,.92) 100%)}}
+/* Menu section in black instead of brown; gold accents stay */
+.menu-section{background:#000}
+.menu-section:before{display:none}
+.product{background:linear-gradient(122deg,#111,#050505)}
+.product__image,.product[data-category="drinks"] .product__image{background:radial-gradient(circle at 50% 55%,rgba(255,255,255,.06),transparent 65%),#0a0a0a}
+.product__image--video{background:#0a0a0a}
+.product__image::after,.product__image--video::after{background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 45%)}
+.product__play{background:rgba(0,0,0,.5)}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
