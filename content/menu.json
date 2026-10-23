@@ -1,0 +1,315 @@
+{
+  "items": [
+    {
+      "ingredients": [
+        "Булочка с кунжутом",
+        "Мясная начинка"
+      ],
+      "price": "",
+      "name": "Мит бан",
+      "visible": true,
+      "note": "Тот самый пирожок с мясом из сказки «Красная шапочка»",
+      "label": "ВЫПЕЧКА · С МЯСОМ",
+      "video": "video/mit-ban.mp4",
+      "image": "video/mit-ban.jpg",
+      "category": "bakery"
+    },
+    {
+      "ingredients": [
+        "Булочка с кунжутом",
+        "Творог"
+      ],
+      "price": "",
+      "name": "Чиз бан",
+      "visible": true,
+      "note": "Такой же пирожок, только с творогом",
+      "label": "ВЫПЕЧКА · С ТВОРОГОМ",
+      "video": "video/mit-ban.mp4",
+      "image": "video/mit-ban.jpg",
+      "category": "bakery"
+    },
+    {
+      "name": "Эспрессо",
+      "category": "coffee",
+      "label": "КОФЕ · КЛАССИКА",
+      "ingredients": [
+        "Эспрессо"
+      ],
+      "price": "160",
+      "image": "images/menu/espresso.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Американо",
+      "category": "coffee",
+      "label": "КОФЕ · КЛАССИКА",
+      "ingredients": [
+        "Эспрессо",
+        "Горячая вода"
+      ],
+      "price": "250",
+      "image": "images/menu/amerikano.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Латте",
+      "category": "coffee",
+      "label": "КОФЕ · С МОЛОКОМ",
+      "ingredients": [
+        "Эспрессо",
+        "Молоко"
+      ],
+      "price": "310",
+      "image": "images/menu/latte.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Капучино",
+      "category": "coffee",
+      "label": "КОФЕ · С МОЛОКОМ",
+      "ingredients": [
+        "Эспрессо",
+        "Молоко"
+      ],
+      "price": "310 / 360",
+      "image": "images/menu/kapuchino.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Флэт уайт",
+      "category": "coffee",
+      "label": "КОФЕ · С МОЛОКОМ",
+      "ingredients": [
+        "Эспрессо",
+        "Молоко"
+      ],
+      "price": "260",
+      "image": "images/menu/flet-uayt.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Какао",
+      "category": "coffee",
+      "label": "ГОРЯЧИЙ НАПИТОК",
+      "ingredients": [
+        "Какао",
+        "Молоко"
+      ],
+      "price": "300",
+      "image": "images/menu/kakao.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Раф",
+      "category": "coffee",
+      "label": "КОФЕ · АВТОРСКИЙ",
+      "ingredients": [
+        "Эспрессо",
+        "Сливки",
+        "Ванильный сироп"
+      ],
+      "price": "310",
+      "image": "images/menu/raf.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Айс раф с урбечом",
+      "category": "cold",
+      "label": "КОФЕ · ХОЛОДНЫЙ",
+      "ingredients": [
+        "Эспрессо",
+        "Сливки",
+        "Урбеч"
+      ],
+      "price": "400",
+      "image": "images/menu/ays-raf-s-urbechom.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Айс латте",
+      "category": "cold",
+      "label": "КОФЕ · ХОЛОДНЫЙ",
+      "ingredients": [
+        "Эспрессо",
+        "Молоко",
+        "Лёд"
+      ],
+      "price": "400",
+      "image": "images/menu/ays-latte.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Айс американо",
+      "category": "cold",
+      "label": "КОФЕ · ХОЛОДНЫЙ",
+      "ingredients": [
+        "Эспрессо",
+        "Вода",
+        "Лёд"
+      ],
+      "price": "300",
+      "image": "images/menu/ays-amerikano.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Мохито классический",
+      "category": "lemonade",
+      "label": "ЛИМОНАД · ОСВЕЖАЮЩИЙ",
+      "ingredients": [
+        "Лайм",
+        "Мята"
+      ],
+      "price": "",
+      "image": "images/menu/mohito-klassicheskiy.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Мохито клубничный",
+      "category": "lemonade",
+      "label": "ЛИМОНАД · ЯГОДНЫЙ",
+      "ingredients": [
+        "Клубника",
+        "Мята"
+      ],
+      "price": "",
+      "image": "images/menu/mohito-klubnichnyy.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Манго — маракуйя",
+      "category": "lemonade",
+      "label": "ЛИМОНАД · ТРОПИЧЕСКИЙ",
+      "ingredients": [
+        "Манго",
+        "Маракуйя"
+      ],
+      "price": "",
+      "image": "images/menu/mango-marakuyya.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Апельсиновый фреш",
+      "category": "lemonade",
+      "label": "ФРЕШ · СВЕЖЕВЫЖАТЫЙ",
+      "ingredients": [
+        "Апельсин"
+      ],
+      "price": "",
+      "image": "images/menu/apelsinovyy-fresh.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Яблочный фреш",
+      "category": "lemonade",
+      "label": "ФРЕШ · СВЕЖЕВЫЖАТЫЙ",
+      "ingredients": [
+        "Яблоко"
+      ],
+      "price": "",
+      "image": "images/menu/yablochnyy-fresh.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Чай чёрный",
+      "category": "tea",
+      "label": "ЧАЙ · КЛАССИКА",
+      "ingredients": [
+        "Чёрный чай"
+      ],
+      "price": "",
+      "image": "images/menu/chay-chernyy.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Чёрный чай с чабрецом",
+      "category": "tea",
+      "label": "ЧАЙ · АРОМАТНЫЙ",
+      "ingredients": [
+        "Чёрный чай",
+        "Чабрец"
+      ],
+      "price": "",
+      "image": "images/menu/chernyy-chay-s-chabrecom.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Чёрный чай с лимоном",
+      "category": "tea",
+      "label": "ЧАЙ · С ЦИТРУСОМ",
+      "ingredients": [
+        "Чёрный чай",
+        "Лимон"
+      ],
+      "price": "",
+      "image": "images/menu/chernyy-chay-s-limonom.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Чай зелёный",
+      "category": "tea",
+      "label": "ЧАЙ · КЛАССИКА",
+      "ingredients": [
+        "Зелёный чай"
+      ],
+      "price": "",
+      "image": "images/menu/chay-zelenyy.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Зелёный жасминовый",
+      "category": "tea",
+      "label": "ЧАЙ · ЦВЕТОЧНЫЙ",
+      "ingredients": [
+        "Зелёный чай",
+        "Жасмин"
+      ],
+      "price": "",
+      "image": "images/menu/zelenyy-zhasminovyy.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Молочный улун",
+      "category": "tea",
+      "label": "ЧАЙ · НЕЖНЫЙ",
+      "ingredients": [
+        "Улун"
+      ],
+      "price": "",
+      "image": "images/menu/molochnyy-ulun.webp",
+      "video": "",
+      "visible": true
+    },
+    {
+      "name": "Горный чай",
+      "category": "tea",
+      "label": "ЧАЙ · ГОРНЫЙ",
+      "ingredients": [
+        "Горный чай"
+      ],
+      "price": "",
+      "image": "images/menu/gornyy-chay.webp",
+      "video": "",
+      "visible": true
+    }
+  ]
+}

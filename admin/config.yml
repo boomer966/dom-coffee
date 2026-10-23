@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    update: "Меню: обновлено через админку"
+
+# Для проверки на компьютере: npx decap-server (не влияет на сайт в интернете)
+local_backend: true
+
+locale: ru
+site_url: /
+display_url: /
+
+media_folder: media/uploads
+public_folder: media/uploads
+
+collections:
+  - name: menu
+    label: Меню
+    editor:
+      preview: false
+    files:
+      - name: menu
+        label: Позиции меню
+        file: content/menu.json
+        fields:
+          - name: items
+            label: Позиции
+            label_singular: позицию
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Порядок на сайте такой же, как здесь. Позиции можно перетаскивать."
+            fields:
+              - {name: name, label: Название, widget: string}
+              - name: category
+                label: Раздел
+                widget: select
+                options:
+                  - {label: Выпечка, value: bakery}
+                  - {label: Кофе, value: coffee}
+                  - {label: Айс-кофе, value: cold}
+                  - {label: Лимонады и фреши, value: lemonade}
+                  - {label: Чай, value: tea}
+              - {name: price, label: Цена, widget: string, required: false, hint: "Только число, например 250 или 310 / 360. Пусто — на сайте будет «Цена скоро»."}
+              - {name: label, label: Подпись над названием, widget: string, required: false, hint: "Например: КОФЕ · КЛАССИКА"}
+              - {name: note, label: Описание, widget: text, required: false}
+              - {name: ingredients, label: Состав, widget: list, required: false, hint: "Через запятую: Эспрессо, Молоко"}
+              - {name: image, label: Фото, widget: image, required: false, hint: "Если есть видео, фото показывается, пока видео грузится."}
+              - {name: video, label: Видео, widget: file, required: false, hint: "Короткое вертикальное видео 3–5 секунд, до 10 МБ. Без звука на сайте."}
+              - {name: visible, label: Показывать на сайте, widget: boolean, default: true, required: false, hint: "Выключите, чтобы временно скрыть позицию (стоп-лист)."}
