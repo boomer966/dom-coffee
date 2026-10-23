@@ -36,8 +36,11 @@ collections:
                 label: Раздел
                 widget: select
                 options:
-                  - {label: Выпечка, value: bakery}
                   - {label: Кофе, value: coffee}
+                  - {label: Блюдо к кофе, value: dish}
+                  - {label: Сендвичи, value: sandwiches}
+                  - {label: Горячие блюда, value: hot}
+                  - {label: Перекус для кофе, value: snacks}
                   - {label: Айс-кофе, value: cold}
                   - {label: Лимонады и фреши, value: lemonade}
                   - {label: Чай, value: tea}

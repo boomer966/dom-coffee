@@ -9,10 +9,10 @@
       "name": "Мит бан",
       "visible": true,
       "note": "Тот самый пирожок с мясом из сказки «Красная шапочка»",
-      "label": "ВЫПЕЧКА · С МЯСОМ",
+      "label": "БЛЮДО К КОФЕ · С МЯСОМ",
       "video": "video/mit-ban.mp4",
       "image": "video/mit-ban.jpg",
-      "category": "bakery"
+      "category": "dish"
     },
     {
       "ingredients": [
@@ -23,10 +23,10 @@
       "name": "Чиз бан",
       "visible": true,
       "note": "Такой же пирожок, только с творогом",
-      "label": "ВЫПЕЧКА · С ТВОРОГОМ",
+      "label": "БЛЮДО К КОФЕ · С ТВОРОГОМ",
       "video": "video/mit-ban.mp4",
       "image": "video/mit-ban.jpg",
-      "category": "bakery"
+      "category": "dish"
     },
     {
       "name": "Эспрессо",

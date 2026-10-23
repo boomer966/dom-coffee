@@ -298,7 +298,6 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 .video-viewer__close:hover{background:var(--red2);border-color:var(--red2)}
 @media(max-width:580px){.video-viewer{padding:0}.video-viewer__frame{height:100svh;width:100%;aspect-ratio:auto;border:0}.product__play{left:10px;bottom:10px;width:32px;height:32px}.product__play::before{left:12px;top:9px}}
 @media(prefers-reduced-motion:reduce){.product:hover .product__image--video video{transform:none}}
-.menu-filter[hidden]{display:none}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
@@ -361,8 +360,11 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <div class="section-head" data-reveal=""><div><h2 id="menuTitle">Выбери <i>свой</i><br/>вкус<span class="red-period">.</span></h2></div><p>Кофе, освежающие лимонады, свежевыжатые соки и чай. Найди напиток под своё настроение.</p></div>
 <div aria-label="Категории меню" class="menu-filters" data-reveal="" id="menuFilters" role="group">
 <button aria-pressed="true" class="menu-filter is-active" data-filter="all">Всё меню <sup>24</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="bakery">Выпечка <sup>02</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="coffee">Кофе <sup>07</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="dish">Блюдо к кофе <sup>02</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="sandwiches">Сендвичи <sup>00</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="hot">Горячие блюда <sup>00</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="snacks">Перекус для кофе <sup>00</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="cold">Айс-кофе <sup>03</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="lemonade">Лимонады и фреши <sup>05</sup></button><button aria-pressed="false" class="menu-filter" data-filter="tea">Чай <sup>07</sup></button><span aria-hidden="true" class="menu-filters__fill"></span>
 </div>
@@ -430,7 +432,7 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
     const list = cards.filter(item => category === 'all' || item.category === category);
     const preview = category === 'all' && !allDrinksExpanded && list.length > 3;
     const visible = preview ? list.slice(0, 2) : list;
-    grid.innerHTML = visible.map(productCard).join('');
+    grid.innerHTML = visible.length ? visible.map(productCard).join('') : '<p class="menu-status">Скоро здесь появятся новые позиции.</p>';
     grid.classList.toggle('is-preview', preview);
     if (preview) {
       grid.insertAdjacentHTML('beforeend', `<button class="menu-more" id="showAllDrinks" type="button" aria-label="Показать всё меню: ${list.length} позиций"><span class="menu-more__eyebrow">КОЛЛЕКЦИЯ «ДОМ КОФЕ»</span><span class="menu-more__heading">Показать<br><em>всё</em> меню<span class="menu-more__dot">.</span></span><span class="menu-more__bottom"><span>ЕЩЁ ${list.length - 2} ПОЗИЦИЙ</span><span class="menu-more__symbol" aria-hidden="true">+</span></span></button>`);
@@ -454,7 +456,6 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
         const count = button.dataset.filter === 'all' ? cards.length : cards.filter(item => item.category === button.dataset.filter).length;
         const sup = button.querySelector('sup');
         if (sup) sup.textContent = String(count).padStart(2, '0');
-        button.hidden = count === 0;
       });
       filterDisplay('all');
     })
