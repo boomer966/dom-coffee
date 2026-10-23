@@ -37,13 +37,11 @@ collections:
                 widget: select
                 options:
                   - {label: Кофе, value: coffee}
+                  - {label: Другие напитки, value: drinks}
                   - {label: Блюдо к кофе, value: dish}
                   - {label: Сендвичи, value: sandwiches}
                   - {label: Горячие блюда, value: hot}
                   - {label: Перекус для кофе, value: snacks}
-                  - {label: Айс-кофе, value: cold}
-                  - {label: Лимонады и фреши, value: lemonade}
-                  - {label: Чай, value: tea}
               - {name: price, label: Цена, widget: string, required: false, hint: "Только число, например 250 или 310 / 360. Пусто — на сайте будет «Цена скоро»."}
               - {name: label, label: Подпись над названием, widget: string, required: false, hint: "Например: КОФЕ · КЛАССИКА"}
               - {name: note, label: Описание, widget: text, required: false}

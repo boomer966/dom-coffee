@@ -121,7 +121,7 @@
     },
     {
       "name": "Айс раф с урбечом",
-      "category": "cold",
+      "category": "coffee",
       "label": "КОФЕ · ХОЛОДНЫЙ",
       "ingredients": [
         "Эспрессо",
@@ -135,7 +135,7 @@
     },
     {
       "name": "Айс латте",
-      "category": "cold",
+      "category": "coffee",
       "label": "КОФЕ · ХОЛОДНЫЙ",
       "ingredients": [
         "Эспрессо",
@@ -149,7 +149,7 @@
     },
     {
       "name": "Айс американо",
-      "category": "cold",
+      "category": "coffee",
       "label": "КОФЕ · ХОЛОДНЫЙ",
       "ingredients": [
         "Эспрессо",
@@ -163,7 +163,7 @@
     },
     {
       "name": "Мохито классический",
-      "category": "lemonade",
+      "category": "drinks",
       "label": "ЛИМОНАД · ОСВЕЖАЮЩИЙ",
       "ingredients": [
         "Лайм",
@@ -176,7 +176,7 @@
     },
     {
       "name": "Мохито клубничный",
-      "category": "lemonade",
+      "category": "drinks",
       "label": "ЛИМОНАД · ЯГОДНЫЙ",
       "ingredients": [
         "Клубника",
@@ -189,7 +189,7 @@
     },
     {
       "name": "Манго — маракуйя",
-      "category": "lemonade",
+      "category": "drinks",
       "label": "ЛИМОНАД · ТРОПИЧЕСКИЙ",
       "ingredients": [
         "Манго",
@@ -202,7 +202,7 @@
     },
     {
       "name": "Апельсиновый фреш",
-      "category": "lemonade",
+      "category": "drinks",
       "label": "ФРЕШ · СВЕЖЕВЫЖАТЫЙ",
       "ingredients": [
         "Апельсин"
@@ -214,7 +214,7 @@
     },
     {
       "name": "Яблочный фреш",
-      "category": "lemonade",
+      "category": "drinks",
       "label": "ФРЕШ · СВЕЖЕВЫЖАТЫЙ",
       "ingredients": [
         "Яблоко"
@@ -226,7 +226,7 @@
     },
     {
       "name": "Чай чёрный",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · КЛАССИКА",
       "ingredients": [
         "Чёрный чай"
@@ -238,7 +238,7 @@
     },
     {
       "name": "Чёрный чай с чабрецом",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · АРОМАТНЫЙ",
       "ingredients": [
         "Чёрный чай",
@@ -251,7 +251,7 @@
     },
     {
       "name": "Чёрный чай с лимоном",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · С ЦИТРУСОМ",
       "ingredients": [
         "Чёрный чай",
@@ -264,7 +264,7 @@
     },
     {
       "name": "Чай зелёный",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · КЛАССИКА",
       "ingredients": [
         "Зелёный чай"
@@ -276,7 +276,7 @@
     },
     {
       "name": "Зелёный жасминовый",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · ЦВЕТОЧНЫЙ",
       "ingredients": [
         "Зелёный чай",
@@ -289,7 +289,7 @@
     },
     {
       "name": "Молочный улун",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · НЕЖНЫЙ",
       "ingredients": [
         "Улун"
@@ -301,7 +301,7 @@
     },
     {
       "name": "Горный чай",
-      "category": "tea",
+      "category": "drinks",
       "label": "ЧАЙ · ГОРНЫЙ",
       "ingredients": [
         "Горный чай"

@@ -149,11 +149,9 @@ main,section,.shell,.hero__copy,.contact__inner,.section-head,.product-grid,.atm
 .menu-filters::-webkit-scrollbar{display:none}
 .menu-filter{flex:0 0 auto}
 .product__price--pending{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--gold);text-transform:uppercase}
-.product[data-category="lemonade"] .product__image{background:radial-gradient(circle at 55% 36%,rgba(242,154,69,.25),transparent 65%),#101711}
-.product[data-category="tea"] .product__image{background:radial-gradient(circle at 50% 50%,rgba(232,181,104,.18),transparent 65%),#14140f}
-.product[data-category="lemonade"] .product__image img{filter:saturate(1.22) brightness(1.10)}
-.product[data-category="tea"] .product__image img{filter:saturate(1.15) brightness(1.08)}
-.product[data-category="lemonade"]:hover .product__image img,.product[data-category="tea"]:hover .product__image img{filter:saturate(1.40) brightness(1.18)}
+.product[data-category="drinks"] .product__image{background:radial-gradient(circle at 55% 36%,rgba(242,154,69,.25),transparent 65%),#101711}
+.product[data-category="drinks"] .product__image img{filter:saturate(1.22) brightness(1.10)}
+.product[data-category="drinks"]:hover .product__image img{filter:saturate(1.40) brightness(1.18)}
 
 /* Кнопка раскрытия полного меню — третья карточка рядом с первыми двумя. */
 .product-grid.is-preview{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -298,6 +296,15 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 .video-viewer__close:hover{background:var(--red2);border-color:var(--red2)}
 @media(max-width:580px){.video-viewer{padding:0}.video-viewer__frame{height:100svh;width:100%;aspect-ratio:auto;border:0}.product__play{left:10px;bottom:10px;width:32px;height:32px}.product__play::before{left:12px;top:9px}}
 @media(prefers-reduced-motion:reduce){.product:hover .product__image--video video{transform:none}}
+/* Phones and tablets: all sections visible at once as a 2-column chip grid instead of a hidden horizontal scroll */
+@media(max-width:850px){
+  .menu-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;white-space:normal;border:0;padding:0}
+  .menu-filters__fill{display:none}
+  .menu-filter{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:48px;margin:0;padding:12px 14px;border:1px solid var(--hairline);white-space:normal;text-align:left;line-height:1.25;font-size:12px;color:#b3a7a1}
+  .menu-filter:after{display:none}
+  .menu-filter sup{vertical-align:baseline;margin-left:0}
+  .menu-filter.is-active{background:rgba(209,169,103,.14);border-color:var(--gold);color:var(--white)}
+}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
@@ -357,18 +364,16 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <section aria-label="Наше отношение к кофе" class="statement"><div class="shell statement__inner"><div class="statement__label" data-reveal=""><span class="red-dot">●</span> НАША ФИЛОСОФИЯ</div><p data-reveal="">ХОРОШИЙ КОФЕ — <em>НЕ ПОВОД.</em><br/>ЭТО ПРИЧИНА ОСТАТЬСЯ.</p><span aria-hidden="true" class="statement__asterisk"></span></div></section>
 <section aria-labelledby="menuTitle" class="menu-section section-pad" id="menu">
 <div class="shell">
-<div class="section-head" data-reveal=""><div><h2 id="menuTitle">Выбери <i>свой</i><br/>вкус<span class="red-period">.</span></h2></div><p>Кофе, освежающие лимонады, свежевыжатые соки и чай. Найди напиток под своё настроение.</p></div>
-<div aria-label="Категории меню" class="menu-filters" data-reveal="" id="menuFilters" role="group">
-<button aria-pressed="true" class="menu-filter is-active" data-filter="all">Всё меню <sup>24</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="coffee">Кофе <sup>07</sup></button>
+<div class="section-head" data-reveal=""><div><h2 id="menuTitle">Выбери <i>свой</i><br/>вкус<span class="red-period">.</span></h2></div><p>Кофе, другие напитки и блюда к кофе. Найди своё под настроение.</p></div>
+<div aria-label="Разделы меню" class="menu-filters" data-reveal="" id="menuFilters" role="group">
+<button aria-pressed="true" class="menu-filter is-active" data-filter="coffee">Кофе <sup>10</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="drinks">Другие напитки <sup>12</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="dish">Блюдо к кофе <sup>02</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="sandwiches">Сендвичи <sup>00</sup></button>
 <button aria-pressed="false" class="menu-filter" data-filter="hot">Горячие блюда <sup>00</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="snacks">Перекус для кофе <sup>00</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="cold">Айс-кофе <sup>03</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="lemonade">Лимонады и фреши <sup>05</sup></button><button aria-pressed="false" class="menu-filter" data-filter="tea">Чай <sup>07</sup></button><span aria-hidden="true" class="menu-filters__fill"></span>
+<button aria-pressed="false" class="menu-filter" data-filter="snacks">Перекус для кофе <sup>00</sup></button><span aria-hidden="true" class="menu-filters__fill"></span>
 </div>
-<div aria-live="polite" class="product-grid is-preview" id="productGrid"><noscript><p class="menu-status">Включите JavaScript, чтобы увидеть меню.</p></noscript></div>
+<div aria-live="polite" class="product-grid" id="productGrid"><noscript><p class="menu-status">Включите JavaScript, чтобы увидеть меню.</p></noscript></div>
 <div class="menu-section__foot"><p>Цены на лимонады, фреши и чай добавим позже. Состав напитков может уточняться.</p><a class="text-link" href="#contacts"><span>Найти нас</span></a></div>
 </div>
 </section>
@@ -388,7 +393,6 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
   const filters = [...document.querySelectorAll('.menu-filter')];
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   let cards = [];
-  let allDrinksExpanded = false;
   const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(entry => {
     const video = entry.target;
     if (entry.isIntersecting) video.play().catch(() => {}); else video.pause();
@@ -429,35 +433,22 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
     return `<article class="product" data-category="${escapeHtml(item.category)}" style="animation-delay:${Math.min(index, 5) * 65}ms">${productMedia(item)}<div class="product__body"><span class="product__category">${escapeHtml(item.label)}</span><h3 class="product__title">${escapeHtml(item.name)}</h3>${item.note ? `<p class="product__note">${escapeHtml(item.note)}</p>` : ''}<div class="product__detail"><span class="product__ornament" aria-hidden="true">✧</span></div>${ingredients.length ? `<ul class="product__ingredients">${ingredients.map(ingredient => `<li>${escapeHtml(ingredient)}</li>`).join('')}</ul>` : ''}<div class="product__bottom"><span class="product__price${price ? '' : ' product__price--pending'}">${price ? `${escapeHtml(price)} <small>₽</small>` : 'Цена скоро'}</span></div></div></article>`;
   };
   const filterDisplay = (category) => {
-    const list = cards.filter(item => category === 'all' || item.category === category);
-    const preview = category === 'all' && !allDrinksExpanded && list.length > 3;
-    const visible = preview ? list.slice(0, 2) : list;
-    grid.innerHTML = visible.length ? visible.map(productCard).join('') : '<p class="menu-status">Скоро здесь появятся новые позиции.</p>';
-    grid.classList.toggle('is-preview', preview);
-    if (preview) {
-      grid.insertAdjacentHTML('beforeend', `<button class="menu-more" id="showAllDrinks" type="button" aria-label="Показать всё меню: ${list.length} позиций"><span class="menu-more__eyebrow">КОЛЛЕКЦИЯ «ДОМ КОФЕ»</span><span class="menu-more__heading">Показать<br><em>всё</em> меню<span class="menu-more__dot">.</span></span><span class="menu-more__bottom"><span>ЕЩЁ ${list.length - 2} ПОЗИЦИЙ</span><span class="menu-more__symbol" aria-hidden="true">+</span></span></button>`);
-      document.getElementById('showAllDrinks').addEventListener('click', () => {
-        allDrinksExpanded = true;
-        filterDisplay('all');
-      });
-    }
+    const list = cards.filter(item => item.category === category);
+    grid.innerHTML = list.length ? list.map(productCard).join('') : '<p class="menu-status">Скоро здесь появятся новые позиции.</p>';
     watchMenuVideos();
     filters.forEach(button => {const active=button.dataset.filter===category;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active));});
   };
-  filters.forEach(button => button.addEventListener('click', () => {
-    if (button.dataset.filter === 'all') allDrinksExpanded = false;
-    filterDisplay(button.dataset.filter);
-  }));
+  filters.forEach(button => button.addEventListener('click', () => filterDisplay(button.dataset.filter)));
   fetch('content/menu.json', {cache: 'no-cache'})
     .then(response => response.json())
     .then(data => {
       cards = (data.items || []).filter(item => item && item.name && item.visible !== false);
       filters.forEach(button => {
-        const count = button.dataset.filter === 'all' ? cards.length : cards.filter(item => item.category === button.dataset.filter).length;
+        const count = cards.filter(item => item.category === button.dataset.filter).length;
         const sup = button.querySelector('sup');
         if (sup) sup.textContent = String(count).padStart(2, '0');
       });
-      filterDisplay('all');
+      filterDisplay('coffee');
     })
     .catch(() => { grid.innerHTML = '<p class="menu-status">Не получилось загрузить меню. Обновите страницу.</p>'; });
   const menuToggle = document.getElementById('menuToggle');
