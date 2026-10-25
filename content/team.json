@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "name": "Камила",
+      "role": "Управляющий · бариста",
+      "days": "Среда, четверг",
+      "photo": "images/team/kamila.jpg",
+      "visible": true
+    }
+  ]
+}

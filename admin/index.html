@@ -6,8 +6,31 @@
   <meta name="robots" content="noindex">
   <title>Дом кофе — управление меню</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Phone layout: Decap's editor and toolbar have a fixed 800px minimum width */
+    @media (max-width: 800px) {
+      [class*="EditorContainer"], [class*="ToolbarContainer"] { min-width: 0 !important; width: 100% !important; }
+      [class*="ToolbarSectionMeta"] [class*="AppHeaderSiteLink"] { display: none !important; }
+      [class*="ToolbarSectionBackLink"] { flex: 0 1 auto !important; min-width: 0 !important; padding: 0 10px !important; }
+      [class*="BackCollection"], [class*="PreviewButtonContainer"] { display: none !important; }
+      [class*="ToolbarSectionMain"] { flex: 1 1 auto !important; min-width: 0 !important; padding: 0 6px !important; justify-content: flex-end !important; }
+      [class*="ToolbarSubSection"] { min-width: 0 !important; }
+      [class*="ToolbarSectionMeta"] { flex-shrink: 0 !important; padding: 0 8px !important; }
+    }
+  </style>
 </head>
 <body>
+  <script>
+    // Jumping straight from one entry to another (browser back/forward) can leave the previous entry's data in the form; reload to load the right one
+    (() => {
+      let lastHash = location.hash;
+      const isEntry = hash => /\/entries\//.test(hash);
+      window.addEventListener('hashchange', () => {
+        if (isEntry(lastHash) && isEntry(location.hash) && lastHash !== location.hash) location.reload();
+        lastHash = location.hash;
+      });
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
 </body>
 </html>

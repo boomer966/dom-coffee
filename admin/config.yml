@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    update: "Меню: обновлено через админку"
+    update: "Сайт: обновлено через админку ({{collection}})"
 
 # Для проверки на компьютере: npx decap-server (не влияет на сайт в интернете)
 local_backend: true
@@ -15,8 +15,29 @@ media_folder: media/uploads
 public_folder: media/uploads
 
 collections:
+  - name: sections
+    label: Разделы меню
+    description: "Кнопки над меню: Кофе, Другие напитки, Блюдо к кофе…"
+    editor:
+      preview: false
+    files:
+      - name: categories
+        label: Разделы меню
+        file: content/categories.json
+        fields:
+          - name: items
+            label: Разделы
+            label_singular: раздел
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Порядок кнопок на сайте такой же, как здесь. Первый раздел открывается сразу. Если переименуете раздел, у его позиций выберите раздел заново."
+            fields:
+              - {name: name, label: Название раздела, widget: string}
+              - {name: visible, label: Показывать на сайте, widget: boolean, default: true, required: false}
+
   - name: menu
-    label: Меню
+    label: Позиции меню
+    description: "Напитки и блюда: цены, состав, фото, видео"
     editor:
       preview: false
     files:
@@ -28,20 +49,20 @@ collections:
             label: Позиции
             label_singular: позицию
             widget: list
-            summary: "{{fields.name}}"
+            summary: "{{fields.name}} · {{fields.category}}"
             hint: "Порядок на сайте такой же, как здесь. Позиции можно перетаскивать."
             fields:
               - {name: name, label: Название, widget: string}
               - name: category
                 label: Раздел
-                widget: select
-                options:
-                  - {label: Кофе, value: coffee}
-                  - {label: Другие напитки, value: drinks}
-                  - {label: Блюдо к кофе, value: dish}
-                  - {label: Сендвичи, value: sandwiches}
-                  - {label: Горячие блюда, value: hot}
-                  - {label: Перекус для кофе, value: snacks}
+                widget: relation
+                collection: sections
+                file: categories
+                search_fields: ["items.*.name"]
+                value_field: "items.*.name"
+                display_fields: ["items.*.name"]
+                options_length: 50
+                hint: "Список берётся из пункта «Разделы меню»."
               - {name: price, label: Цена, widget: string, required: false, hint: "Только число, например 250 или 310 / 360. Пусто — на сайте будет «Цена скоро»."}
               - {name: label, label: Подпись над названием, widget: string, required: false, hint: "Например: КОФЕ · КЛАССИКА"}
               - {name: note, label: Описание, widget: text, required: false}
@@ -49,3 +70,40 @@ collections:
               - {name: image, label: Фото, widget: image, required: false, hint: "Если есть видео, фото показывается, пока видео грузится."}
               - {name: video, label: Видео, widget: file, required: false, hint: "Короткое вертикальное видео 3–5 секунд, до 10 МБ. Без звука на сайте."}
               - {name: visible, label: Показывать на сайте, widget: boolean, default: true, required: false, hint: "Выключите, чтобы временно скрыть позицию (стоп-лист)."}
+
+  - name: contacts
+    label: Контакты
+    description: "Телефон, адрес и часы работы в разделе «Обратная связь»"
+    editor:
+      preview: false
+    files:
+      - name: contacts
+        label: Контактные данные
+        file: content/contacts.json
+        fields:
+          - {name: phone, label: Телефон, widget: string, required: false, hint: "Например: +7 (928) 091-48-84. На телефоне по нему можно будет сразу позвонить."}
+          - {name: address, label: Адрес, widget: string, required: false}
+          - {name: hours, label: Часы работы, widget: string, required: false, hint: "Например: 8:00–23:00 или Ежедневно, 8:00–23:00"}
+
+  - name: team
+    label: Наш коллектив
+    description: "Сотрудники в разделе «Обратная связь»"
+    editor:
+      preview: false
+    files:
+      - name: team
+        label: Наш коллектив
+        file: content/team.json
+        fields:
+          - name: items
+            label: Сотрудники
+            label_singular: сотрудника
+            widget: list
+            summary: "{{fields.name}} · {{fields.role}}"
+            hint: "Порядок на сайте такой же, как здесь."
+            fields:
+              - {name: photo, label: Фото, widget: image, required: false, hint: "Лучше вертикальное фото, где видно лицо."}
+              - {name: name, label: Имя, widget: string}
+              - {name: role, label: Должность, widget: string, required: false, hint: "Например: Управляющий · бариста"}
+              - {name: days, label: Рабочие дни, widget: string, required: false, hint: "Например: Среда, четверг"}
+              - {name: visible, label: Показывать на сайте, widget: boolean, default: true, required: false}

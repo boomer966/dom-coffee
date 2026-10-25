@@ -150,9 +150,9 @@ main,section,.shell,.hero__copy,.contact__inner,.section-head,.product-grid,.atm
 .menu-filters::-webkit-scrollbar{display:none}
 .menu-filter{flex:0 0 auto}
 .product__price--pending{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--gold);text-transform:uppercase}
-.product[data-category="drinks"] .product__image{background:radial-gradient(circle at 55% 36%,rgba(242,154,69,.25),transparent 65%),#101711}
-.product[data-category="drinks"] .product__image img{filter:saturate(1.22) brightness(1.10)}
-.product[data-category="drinks"]:hover .product__image img{filter:saturate(1.40) brightness(1.18)}
+.product[data-category="drugie-napitki"] .product__image{background:radial-gradient(circle at 55% 36%,rgba(242,154,69,.25),transparent 65%),#101711}
+.product[data-category="drugie-napitki"] .product__image img{filter:saturate(1.22) brightness(1.10)}
+.product[data-category="drugie-napitki"]:hover .product__image img{filter:saturate(1.40) brightness(1.18)}
 
 /* Кнопка раскрытия полного меню — третья карточка рядом с первыми двумя. */
 .product-grid.is-preview{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -315,7 +315,7 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 .menu-section{background:#000}
 .menu-section:before{display:none}
 .product{background:linear-gradient(122deg,#111,#050505)}
-.product__image,.product[data-category="drinks"] .product__image{background:radial-gradient(circle at 50% 55%,rgba(255,255,255,.06),transparent 65%),#0a0a0a}
+.product__image,.product[data-category="drugie-napitki"] .product__image{background:radial-gradient(circle at 50% 55%,rgba(255,255,255,.06),transparent 65%),#0a0a0a}
 .product__image--video{background:#0a0a0a}
 .product__image::after,.product__image--video::after{background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 45%)}
 .product__play{background:rgba(0,0,0,.5)}
@@ -370,6 +370,10 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 @media(max-width:580px){.hero__bottom{margin-top:56px}}
 /* Phone hero: ДОМ КОФЕ in one line on the upper awning, above the КОФЕЙНЯ sign; tagline and buttons at the bottom */
 @media(max-width:580px){.hero__mobile-brand{position:static;min-height:0;animation:none}.hero__mobile-brand:before{display:none}.hero__mobile-wordmark{position:absolute;left:0;right:0;top:15%;z-index:1;transform:translateY(-50%);flex-direction:row;justify-content:center;gap:.26em;font-size:clamp(42px,14vw,60px);line-height:1;white-space:nowrap}.hero__mobile-tag{position:absolute;left:0;right:0;top:20.6%;margin-top:0;z-index:1}.hero__bottom p{display:none}.hero__inner{justify-content:flex-end}.hero__bottom{margin-top:0}}
+/* Team card with several people: each person is a photo + text row, separated by a hairline */
+.feedback-card--team{grid-auto-rows:auto}
+.feedback-card--team .feedback-card__body ~ .feedback-card__photo,.feedback-card--team .feedback-card__body ~ .feedback-card__photo + .feedback-card__body{border-top:1px solid rgba(209,169,103,.19)}
+.feedback-card__body--wide{grid-column:1/-1}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
@@ -424,12 +428,12 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <div class="shell">
 <div class="section-head" data-reveal=""><div><h2 id="menuTitle">Выбери <i>свой</i><br/>вкус<span class="red-period">.</span></h2></div><p>Кофе, другие напитки и блюда к кофе. Найди своё под настроение.</p></div>
 <div aria-label="Разделы меню" class="menu-filters" data-reveal="" id="menuFilters" role="group">
-<button aria-pressed="true" class="menu-filter is-active" data-filter="coffee">Кофе <sup>10</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="drinks">Другие напитки <sup>12</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="dish">Блюдо к кофе <sup>02</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="sandwiches">Сендвичи <sup>00</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="hot">Горячие блюда <sup>00</sup></button>
-<button aria-pressed="false" class="menu-filter" data-filter="snacks">Перекус для кофе <sup>00</sup></button><span aria-hidden="true" class="menu-filters__fill"></span>
+<button aria-pressed="true" class="menu-filter is-active" data-filter="Кофе">Кофе <sup>10</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="Другие напитки">Другие напитки <sup>12</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="Блюдо к кофе">Блюдо к кофе <sup>02</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="Сендвичи">Сендвичи <sup>00</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="Горячие блюда">Горячие блюда <sup>00</sup></button>
+<button aria-pressed="false" class="menu-filter" data-filter="Перекус для кофе">Перекус для кофе <sup>00</sup></button><span aria-hidden="true" class="menu-filters__fill"></span>
 </div>
 <div aria-live="polite" class="product-grid" id="productGrid"><noscript><p class="menu-status">Включите JavaScript, чтобы увидеть меню.</p></noscript></div>
 <div class="menu-section__foot"><p>Цены на лимонады, фреши и чай добавим позже. Состав напитков может уточняться.</p><a class="text-link" href="#contacts"><span>Найти нас</span></a></div>
@@ -446,13 +450,13 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <article class="feedback-card" data-reveal="">
 <span class="feedback-card__kicker">01 · КОНТАКТЫ</span>
 <h3 class="feedback-card__title">Контактные данные</h3>
-<dl class="contact-list">
+<dl class="contact-list" id="contactList">
 <div class="contact-list__row"><dt>Телефон</dt><dd><a href="tel:+79280914884">+7 (928) 091-48-84</a></dd></div>
 <div class="contact-list__row"><dt>Адрес</dt><dd>Магас, Набережная ул., 13</dd></div>
 <div class="contact-list__row"><dt>Часы работы</dt><dd>8:00–23:00</dd></div>
 </dl>
 </article>
-<article class="feedback-card feedback-card--team" data-reveal="">
+<article class="feedback-card feedback-card--team" data-reveal="" id="teamCard">
 <div class="feedback-card__head">
 <span class="feedback-card__kicker">02 · КОМАНДА</span>
 <h3 class="feedback-card__title">Наш коллектив</h3>
@@ -475,11 +479,15 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <div class="video-viewer" id="videoViewer" role="dialog" aria-modal="true" aria-label="Видео позиции меню" hidden><div class="video-viewer__frame"><video playsinline loop controls></video><span class="video-viewer__title"></span><button class="video-viewer__close" type="button" aria-label="Закрыть видео">✕</button></div></div>
 <script>(() => {
   'use strict';
-  // Menu lives in content/menu.json and is edited through /admin (Decap CMS)
+  // Menu, sections, contacts and team live in content/*.json and are edited through /admin (Decap CMS)
   document.documentElement.classList.add('js-enhanced');
   const grid = document.getElementById('productGrid');
-  const filters = [...document.querySelectorAll('.menu-filter')];
+  const filterBar = document.getElementById('menuFilters');
+  let filters = [...filterBar.querySelectorAll('.menu-filter')];
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const translit = {а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'e',ж:'zh',з:'z',и:'i',й:'y',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'h',ц:'c',ч:'ch',ш:'sh',щ:'sch',ъ:'',ы:'y',ь:'',э:'e',ю:'yu',я:'ya'};
+  const slug = value => String(value ?? '').toLowerCase().replace(/[а-яё]/g, ch => translit[ch] ?? '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const loadJson = url => fetch(url, {cache: 'no-cache'}).then(response => { if (!response.ok) throw new Error(url); return response.json(); });
   let cards = [];
   const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(entry => {
     const video = entry.target;
@@ -518,7 +526,7 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
   const productCard = (item, index) => {
     const price = String(item.price ?? '').trim();
     const ingredients = (item.ingredients || []).filter(Boolean);
-    return `<article class="product" data-category="${escapeHtml(item.category)}" style="animation-delay:${Math.min(index, 5) * 65}ms">${productMedia(item)}<div class="product__body"><span class="product__category">${escapeHtml(item.label)}</span><h3 class="product__title">${escapeHtml(item.name)}</h3>${item.note ? `<p class="product__note">${escapeHtml(item.note)}</p>` : ''}<div class="product__detail"><span class="product__ornament" aria-hidden="true">✧</span></div>${ingredients.length ? `<ul class="product__ingredients">${ingredients.map(ingredient => `<li>${escapeHtml(ingredient)}</li>`).join('')}</ul>` : ''}<div class="product__bottom"><span class="product__price${price ? '' : ' product__price--pending'}">${price ? `${escapeHtml(price)} <small>₽</small>` : 'Цена скоро'}</span></div></div></article>`;
+    return `<article class="product" data-category="${slug(item.category)}" style="animation-delay:${Math.min(index, 5) * 65}ms">${productMedia(item)}<div class="product__body"><span class="product__category">${escapeHtml(item.label)}</span><h3 class="product__title">${escapeHtml(item.name)}</h3>${item.note ? `<p class="product__note">${escapeHtml(item.note)}</p>` : ''}<div class="product__detail"><span class="product__ornament" aria-hidden="true">✧</span></div>${ingredients.length ? `<ul class="product__ingredients">${ingredients.map(ingredient => `<li>${escapeHtml(ingredient)}</li>`).join('')}</ul>` : ''}<div class="product__bottom"><span class="product__price${price ? '' : ' product__price--pending'}">${price ? `${escapeHtml(price)} <small>₽</small>` : 'Цена скоро'}</span></div></div></article>`;
   };
   const filterDisplay = (category) => {
     const list = cards.filter(item => item.category === category);
@@ -526,19 +534,46 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
     watchMenuVideos();
     filters.forEach(button => {const active=button.dataset.filter===category;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active));});
   };
-  filters.forEach(button => button.addEventListener('click', () => filterDisplay(button.dataset.filter)));
-  fetch('content/menu.json', {cache: 'no-cache'})
-    .then(response => response.json())
-    .then(data => {
-      cards = (data.items || []).filter(item => item && item.name && item.visible !== false);
-      filters.forEach(button => {
-        const count = cards.filter(item => item.category === button.dataset.filter).length;
-        const sup = button.querySelector('sup');
-        if (sup) sup.textContent = String(count).padStart(2, '0');
-      });
-      filterDisplay('coffee');
+  const renderFilters = categories => {
+    filterBar.innerHTML = categories.map(name => {
+      const count = cards.filter(item => item.category === name).length;
+      return `<button aria-pressed="false" class="menu-filter" data-filter="${escapeHtml(name)}" type="button">${escapeHtml(name)} <sup>${String(count).padStart(2, '0')}</sup></button>`;
+    }).join('') + '<span aria-hidden="true" class="menu-filters__fill"></span>';
+    filters = [...filterBar.querySelectorAll('.menu-filter')];
+    filters.forEach(button => button.addEventListener('click', () => filterDisplay(button.dataset.filter)));
+  };
+  Promise.all([loadJson('content/menu.json'), loadJson('content/categories.json').catch(() => null)])
+    .then(([menu, sections]) => {
+      cards = (menu.items || []).filter(item => item && item.name && item.visible !== false);
+      const categories = sections && Array.isArray(sections.items)
+        ? sections.items.filter(section => section && section.name && section.visible !== false).map(section => section.name)
+        : [...new Set(cards.map(item => item.category))];
+      renderFilters(categories);
+      if (categories.length) filterDisplay(categories[0]);
+      else grid.innerHTML = '<p class="menu-status">Скоро здесь появится меню.</p>';
     })
     .catch(() => { grid.innerHTML = '<p class="menu-status">Не получилось загрузить меню. Обновите страницу.</p>'; });
+  const contactList = document.getElementById('contactList');
+  const contactRow = (label, value) => value ? `<div class="contact-list__row"><dt>${label}</dt><dd>${value}</dd></div>` : '';
+  loadJson('content/contacts.json').then(contacts => {
+    const phone = String(contacts.phone || '').trim();
+    const html = contactRow('Телефон', phone ? `<a href="tel:${escapeHtml(phone.replace(/[^\d+]/g, ''))}">${escapeHtml(phone)}</a>` : '')
+      + contactRow('Адрес', escapeHtml(contacts.address))
+      + contactRow('Часы работы', escapeHtml(contacts.hours));
+    if (html) contactList.innerHTML = html;
+  }).catch(() => {});
+  const teamCard = document.getElementById('teamCard');
+  const teamMember = person => {
+    const name = escapeHtml(person.name);
+    const role = escapeHtml(person.role);
+    const days = escapeHtml(person.days);
+    return `<div class="feedback-card__photo">${person.photo ? `<img alt="${name}${role ? ` — ${role}` : ''}" loading="lazy" src="${escapeHtml(person.photo)}">` : '<span>Фото скоро</span>'}</div><div class="feedback-card__body"><p class="team-member__name">${name}</p>${role ? `<p class="team-member__role">${role}</p>` : ''}${days ? `<dl class="contact-list"><div class="contact-list__row"><dt>Рабочие дни</dt><dd>${days}</dd></div></dl>` : ''}</div>`;
+  };
+  loadJson('content/team.json').then(team => {
+    const people = (team.items || []).filter(person => person && person.name && person.visible !== false);
+    teamCard.querySelectorAll('.feedback-card__photo, .feedback-card__body').forEach(node => node.remove());
+    teamCard.insertAdjacentHTML('beforeend', people.length ? people.map(teamMember).join('') : '<div class="feedback-card__body feedback-card__body--wide"><p class="feedback-card__soon">Скоро здесь появится рассказ о нашей команде.</p></div>');
+  }).catch(() => {});
   const menuToggle = document.getElementById('menuToggle');
   const nav = document.getElementById('siteNav');
   const closeMenu=()=>{nav.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Открыть меню')};

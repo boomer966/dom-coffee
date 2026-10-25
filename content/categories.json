@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "name": "Кофе",
+      "visible": true
+    },
+    {
+      "name": "Другие напитки",
+      "visible": true
+    },
+    {
+      "name": "Блюдо к кофе",
+      "visible": true
+    },
+    {
+      "name": "Сендвичи",
+      "visible": true
+    },
+    {
+      "name": "Горячие блюда",
+      "visible": true
+    },
+    {
+      "name": "Перекус для кофе",
+      "visible": true
+    }
+  ]
+}
