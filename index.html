@@ -333,6 +333,17 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 .feedback-card__photo{display:grid;place-items:center;min-height:100%;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.05),transparent 65%),#0a0a0a;border-right:1px solid rgba(209,169,103,.19)}
 .feedback-card__photo span{padding:10px 16px;border:1px dashed rgba(209,169,103,.35);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 @media(max-width:850px){.feedback-grid{grid-template-columns:1fr}.feedback-card{min-height:0;padding:26px 22px}.feedback-card--team{grid-template-columns:1fr;padding:0}.feedback-card__photo{min-height:220px;border-right:0;border-bottom:1px solid rgba(209,169,103,.19)}.feedback-card--team .feedback-card__body{padding:26px 22px}.feedback-card__soon{margin-top:8px}}
+.contact-list{margin:6px 0 0;display:grid;gap:16px}
+.contact-list__row{display:grid;gap:4px;padding-bottom:14px;border-bottom:1px solid rgba(209,169,103,.18)}
+.contact-list dt{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.contact-list dd{margin:0;font-size:17px;line-height:1.4;color:var(--white)}
+.contact-list a{color:inherit;border-bottom:1px solid rgba(209,169,103,.4);transition:color .25s,border-color .25s}
+.contact-list a:hover{color:var(--gold);border-color:var(--gold)}
+.contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:24px}
+.contact-actions__btn{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 14px;border:1px solid rgba(209,169,103,.45);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--white);transition:background .25s,border-color .25s}
+.contact-actions__btn:hover{border-color:var(--gold);background:rgba(209,169,103,.12)}
+.contact-actions__btn--primary{background:var(--red);border-color:var(--red)}
+.contact-actions__btn--primary:hover{background:var(--red2);border-color:var(--red2)}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
@@ -409,7 +420,14 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 <article class="feedback-card" data-reveal="">
 <span class="feedback-card__kicker">01 · КОНТАКТЫ</span>
 <h3 class="feedback-card__title">Контактные данные</h3>
-<p class="feedback-card__soon">Скоро здесь появятся телефон, адрес и часы работы.</p>
+<dl class="contact-list">
+<div class="contact-list__row"><dt>Телефон</dt><dd><a href="tel:+79280914884">+7 (928) 091-48-84</a></dd></div>
+<div class="contact-list__row"><dt>Адрес</dt><dd>Магас, Набережная ул., 13</dd></div>
+</dl>
+<div class="contact-actions">
+<a class="contact-actions__btn contact-actions__btn--primary" href="tel:+79280914884">Позвонить</a>
+<a class="contact-actions__btn" href="https://yandex.ru/maps/org/dom_kofe/66554318891/" rel="noopener noreferrer" target="_blank">Маршрут</a>
+</div>
 </article>
 <article class="feedback-card feedback-card--team" data-reveal="">
 <div class="feedback-card__photo" aria-hidden="true"><span>Фото коллектива</span></div>
