@@ -368,6 +368,8 @@ html:not(.js-enhanced) #allDrinksFallback:focus-visible ~ #productGrid .menu-mor
 .hero__photo{opacity:1!important;animation:none!important}
 /* Phone hero: tagline and buttons sit lower, away from the wordmark */
 @media(max-width:580px){.hero__bottom{margin-top:56px}}
+/* Phone hero: the name now sits on the awning in the photo, so the stacked wordmark is hidden (still read by screen readers) */
+@media(max-width:580px){.hero__mobile-wordmark{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hero__mobile-brand{min-height:0}.hero__mobile-brand:before{display:none}.hero__mobile-tag{margin-top:0}.hero__inner{justify-content:flex-end}.hero__bottom{margin-top:28px}}
 .menu-status{grid-column:1/-1;margin:0;padding:40px 0;color:var(--muted);text-align:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Дом кофе", "description": "Кофейня в Магасе. Горячий и холодный кофе, атмосфера, меню и маршрут.", "address": {"@type": "PostalAddress", "addressLocality": "Магас", "addressRegion": "Республика Ингушетия", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 43.159639, "longitude": 44.798812}, "hasMap": "https://yandex.ru/maps/org/dom_kofe/66554318891/", "servesCuisine": "Кофе и напитки", "hasMenu": "#menu"}</script>
